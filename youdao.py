@@ -24,6 +24,8 @@ if __name__ == "__main__":
     print qdata["query"], "-", liststr(qdata["translation"])
 
     if qdata.has_key("basic"):
+        if qdata["basic"].has_key("phonetic"):
+            print qdata["basic"]["phonetic"]
         print liststr(qdata["basic"]["explains"])
 
     if qdata.has_key("web"):
